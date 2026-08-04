@@ -1,0 +1,29 @@
+{
+  "bot_name": "MaxxCrypto Luno Multi Position V3.1",
+  "mode": "PAPER",
+  "pairs": [
+    "XRPMYR",
+    "ADAMYR",
+    "TRXMYR",
+    "XLMMYR"
+  ],
+  "paper_start_myr": 100.0,
+  "paper_myr": 100.0,
+  "positions": {},
+  "realized_profit_myr": 0.0,
+  "trade_count": 0,
+  "winning_trades": 0,
+  "losing_trades": 0,
+  "win_rate_pct": 0.0,
+  "last_action": "INITIALIZED",
+  "previous_scores": {},
+  "adaptive_buy_score": 80,
+  "last_scan": {
+    "markets": [],
+    "open_positions": 0,
+    "max_open_positions": 3,
+    "current_exposure_myr": 0
+  },
+  "github_action": {},
+  "updated_at": "2026-08-04T00:00:00+00:00"
+}
