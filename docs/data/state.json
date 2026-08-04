@@ -12,27 +12,30 @@
   "win_rate_pct": 0.0,
   "last_action": "HOLD",
   "last_scan": {
-    "time": "2026-08-04T11:47:10.549737+00:00",
+    "time": "2026-08-04T12:09:41.894714+00:00",
     "pair": "XRPMYR",
     "status": "SCANNING",
     "action": "HOLD",
-    "score": 5,
+    "score": 70,
     "minimum_buy_score": 80,
     "reasons": [
+      "breakout",
+      "RSI",
+      "volume",
       "spread"
     ],
     "metrics": {
-      "close": 4.3945,
-      "bid": 4.3978,
-      "ask": 4.3979,
+      "close": 4.4103,
+      "bid": 4.407,
+      "ask": 4.4071,
       "spread_pct": 0.0023,
-      "ema9": 4.39337905,
-      "ema21": 4.39706561,
-      "ema50": 4.40094439,
-      "rsi14": 43.94,
-      "volume_ratio": 0.389,
-      "previous_20_high": 4.4188
+      "ema9": 4.39657824,
+      "ema21": 4.39575295,
+      "ema50": 4.39878581,
+      "rsi14": 64.01,
+      "volume_ratio": 2.14,
+      "previous_20_high": 4.4078
     }
   },
-  "updated_at": "2026-08-04T11:47:10.549822+00:00"
+  "updated_at": "2026-08-04T12:09:41.894793+00:00"
 }
