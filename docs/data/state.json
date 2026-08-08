@@ -11,84 +11,81 @@
   "win_rate_pct": 0.0,
   "last_action": "HOLD_POSITIONS",
   "last_scan": {
-    "time": "2026-08-08T14:04:42.692276+00:00",
+    "time": "2026-08-08T15:50:24.218464+00:00",
     "status": "MULTI_SCAN",
     "open_positions": 1,
     "max_open_positions": 3,
     "current_exposure_myr": 5.0,
     "max_total_exposure_myr": 15.0,
-    "best_pair": "XRPMYR",
-    "best_score": 80,
+    "best_pair": "XLMMYR",
+    "best_score": 50,
     "markets": [
       {
+        "pair": "XLMMYR",
+        "score": 50,
+        "minimum_buy_score": 80,
+        "position_open": false,
+        "reasons": [
+          "trend",
+          "momentum",
+          "breakout"
+        ],
+        "metrics": {
+          "close": 0.6999,
+          "bid": 0.6942,
+          "ask": 0.6999,
+          "spread_pct": 0.8144,
+          "ema9": 0.68976173,
+          "ema21": 0.68626961,
+          "ema50": 0.68296649,
+          "rsi14": 94.12,
+          "volume_ratio": 0.521,
+          "breakout_level": 0.69
+        }
+      },
+      {
         "pair": "XRPMYR",
-        "score": 80,
+        "score": 40,
         "minimum_buy_score": 80,
         "position_open": true,
         "reasons": [
           "trend",
-          "momentum",
-          "volume kuat",
-          "spread sangat rendah",
-          "breakout"
+          "spread sangat rendah"
         ],
         "metrics": {
-          "close": 4.2646,
-          "bid": 4.2654,
-          "ask": 4.2655,
+          "close": 4.2699,
+          "bid": 4.2699,
+          "ask": 4.27,
           "spread_pct": 0.0023,
-          "ema9": 4.25901193,
-          "ema21": 4.25106351,
-          "ema50": 4.23674464,
-          "rsi14": 91.19,
-          "volume_ratio": 5.593,
-          "breakout_level": 4.2634
+          "ema9": 4.26721893,
+          "ema21": 4.25980732,
+          "ema50": 4.24451673,
+          "rsi14": 81.69,
+          "volume_ratio": 0.477,
+          "breakout_level": 4.274
         }
       },
       {
         "pair": "ADAMYR",
-        "score": 38,
+        "score": 36,
         "minimum_buy_score": 80,
         "position_open": false,
         "reasons": [
-          "momentum",
+          "trend awal",
           "RSI pulih",
-          "spread sangat rendah",
-          "breakout"
+          "spread sangat rendah"
         ],
         "metrics": {
-          "close": 0.8188,
-          "bid": 0.8199,
-          "ask": 0.82,
+          "close": 0.8185,
+          "bid": 0.8186,
+          "ask": 0.8187,
           "spread_pct": 0.0122,
-          "ema9": 0.81699389,
-          "ema21": 0.81713749,
-          "ema50": 0.81805858,
-          "rsi14": 50.46,
-          "volume_ratio": 0.198,
-          "breakout_level": 0.8184
-        }
-      },
-      {
-        "pair": "XLMMYR",
-        "score": 35,
-        "minimum_buy_score": 80,
-        "position_open": false,
-        "reasons": [
-          "trend",
-          "spread rendah"
-        ],
-        "metrics": {
-          "close": 0.683,
-          "bid": 0.6836,
-          "ask": 0.6843,
-          "spread_pct": 0.1023,
-          "ema9": 0.68249749,
-          "ema21": 0.68212868,
-          "ema50": 0.68065344,
-          "rsi14": 80.65,
-          "volume_ratio": 0.027,
-          "breakout_level": 0.6842
+          "ema9": 0.818545,
+          "ema21": 0.81805341,
+          "ema50": 0.81829277,
+          "rsi14": 50.29,
+          "volume_ratio": 0.0,
+          "breakout_level": 0.8205
         }
       }
     ],
@@ -96,7 +93,7 @@
       "TRXMYR": "float division by zero"
     }
   },
-  "updated_at": "2026-08-08T14:04:42.692303+00:00",
+  "updated_at": "2026-08-08T15:50:24.218512+00:00",
   "pairs": [
     "XRPMYR",
     "ADAMYR",
@@ -119,19 +116,19 @@
         "breakout"
       ],
       "opened_at": "2026-08-08T08:22:53.844227+00:00",
-      "highest_price": 4.2654
+      "highest_price": 4.2699
     }
   },
   "previous_scores": {
     "XRPMYR": 80,
-    "ADAMYR": 38,
+    "ADAMYR": 36,
     "TRXMYR": 0,
-    "XLMMYR": 35
+    "XLMMYR": 50
   },
   "adaptive_buy_score": 80,
   "github_action": {
     "event": "schedule",
-    "run_number": "50",
+    "run_number": "51",
     "automatic": true
   }
 }
