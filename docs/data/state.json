@@ -11,57 +11,35 @@
   "win_rate_pct": 0.0,
   "last_action": "HOLD",
   "last_scan": {
-    "time": "2026-08-14T18:09:58.809665+00:00",
+    "time": "2026-08-14T20:05:00.857705+00:00",
     "status": "MULTI_SCAN",
     "open_positions": 0,
     "max_open_positions": 3,
     "current_exposure_myr": 0,
     "max_total_exposure_myr": 15.0,
-    "best_pair": "ADAMYR",
-    "best_score": 43,
+    "best_pair": "XLMMYR",
+    "best_score": 28,
     "markets": [
       {
-        "pair": "ADAMYR",
-        "score": 43,
+        "pair": "XLMMYR",
+        "score": 28,
         "minimum_buy_score": 80,
         "position_open": false,
         "reasons": [
           "trend awal",
-          "momentum",
           "spread sangat rendah"
         ],
         "metrics": {
-          "close": 0.7387,
-          "bid": 0.736,
-          "ask": 0.7361,
-          "spread_pct": 0.0136,
-          "ema9": 0.73795634,
-          "ema21": 0.73786713,
-          "ema50": 0.74016865,
-          "rsi14": 73.73,
-          "volume_ratio": 0.024,
-          "breakout_level": 0.7387
-        }
-      },
-      {
-        "pair": "XLMMYR",
-        "score": 18,
-        "minimum_buy_score": 80,
-        "position_open": false,
-        "reasons": [
-          "trend awal"
-        ],
-        "metrics": {
           "close": 0.6544,
-          "bid": 0.655,
-          "ask": 0.6563,
-          "spread_pct": 0.1981,
-          "ema9": 0.65447175,
-          "ema21": 0.65433849,
-          "ema50": 0.65460086,
-          "rsi14": 0.0,
+          "bid": 0.6545,
+          "ask": 0.6546,
+          "spread_pct": 0.0153,
+          "ema9": 0.65441204,
+          "ema21": 0.65437131,
+          "ema50": 0.65454935,
+          "rsi14": 100.0,
           "volume_ratio": 0.0,
-          "breakout_level": 0.6571
+          "breakout_level": 0.6544
         }
       },
       {
@@ -73,16 +51,37 @@
           "spread sangat rendah"
         ],
         "metrics": {
-          "close": 4.1055,
-          "bid": 4.1034,
-          "ask": 4.1035,
+          "close": 4.1011,
+          "bid": 4.0968,
+          "ask": 4.0969,
           "spread_pct": 0.0024,
-          "ema9": 4.11529881,
-          "ema21": 4.11638639,
-          "ema50": 4.11856591,
-          "rsi14": 46.86,
-          "volume_ratio": 0.74,
-          "breakout_level": 4.1348
+          "ema9": 4.1046664,
+          "ema21": 4.10920838,
+          "ema50": 4.11437219,
+          "rsi14": 17.91,
+          "volume_ratio": 0.012,
+          "breakout_level": 4.1165
+        }
+      },
+      {
+        "pair": "ADAMYR",
+        "score": 10,
+        "minimum_buy_score": 80,
+        "position_open": false,
+        "reasons": [
+          "spread sangat rendah"
+        ],
+        "metrics": {
+          "close": 0.736,
+          "bid": 0.7384,
+          "ask": 0.7385,
+          "spread_pct": 0.0135,
+          "ema9": 0.73618457,
+          "ema21": 0.73672315,
+          "ema50": 0.73895523,
+          "rsi14": 31.82,
+          "volume_ratio": 0.0,
+          "breakout_level": 0.7387
         }
       },
       {
@@ -96,18 +95,18 @@
           "bid": 1.3551,
           "ask": 1.3699,
           "spread_pct": 1.0804,
-          "ema9": 1.35691093,
-          "ema21": 1.35965833,
-          "ema50": 1.3632656,
-          "rsi14": 0.0,
+          "ema9": 1.35540382,
+          "ema21": 1.35722649,
+          "ema50": 1.36099639,
+          "rsi14": 100.0,
           "volume_ratio": 0.0,
-          "breakout_level": 1.3637
+          "breakout_level": 1.3551
         }
       }
     ],
     "errors": {}
   },
-  "updated_at": "2026-08-14T18:09:58.809723+00:00",
+  "updated_at": "2026-08-14T20:05:00.857731+00:00",
   "pairs": [
     "XRPMYR",
     "ADAMYR",
@@ -117,14 +116,14 @@
   "positions": {},
   "previous_scores": {
     "XRPMYR": 10,
-    "ADAMYR": 43,
+    "ADAMYR": 10,
     "TRXMYR": 0,
-    "XLMMYR": 18
+    "XLMMYR": 28
   },
   "adaptive_buy_score": 80,
   "github_action": {
     "event": "schedule",
-    "run_number": "101",
+    "run_number": "102",
     "automatic": true
   }
 }
