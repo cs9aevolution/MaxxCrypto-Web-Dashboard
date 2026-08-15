@@ -11,17 +11,17 @@
   "win_rate_pct": 0.0,
   "last_action": "HOLD_POSITIONS",
   "last_scan": {
-    "time": "2026-08-15T10:51:23.330898+00:00",
+    "time": "2026-08-15T11:40:47.061587+00:00",
     "status": "MULTI_SCAN",
     "open_positions": 1,
     "max_open_positions": 3,
     "current_exposure_myr": 5.0,
     "max_total_exposure_myr": 15.0,
-    "best_pair": "XLMMYR",
+    "best_pair": "ADAMYR",
     "best_score": 30,
     "markets": [
       {
-        "pair": "XLMMYR",
+        "pair": "ADAMYR",
         "score": 30,
         "minimum_buy_score": 80,
         "position_open": false,
@@ -30,41 +30,63 @@
           "spread sangat rendah"
         ],
         "metrics": {
-          "close": 0.6498,
-          "bid": 0.6497,
-          "ask": 0.6498,
-          "spread_pct": 0.0154,
-          "ema9": 0.64988444,
-          "ema21": 0.65038064,
-          "ema50": 0.65124817,
-          "rsi14": 6.67,
-          "volume_ratio": 5.112,
-          "breakout_level": 0.65
+          "close": 0.7332,
+          "bid": 0.7327,
+          "ask": 0.7328,
+          "spread_pct": 0.0136,
+          "ema9": 0.73428708,
+          "ema21": 0.7353793,
+          "ema50": 0.73670734,
+          "rsi14": 29.03,
+          "volume_ratio": 1.604,
+          "breakout_level": 0.7358
+        }
+      },
+      {
+        "pair": "TRXMYR",
+        "score": 30,
+        "minimum_buy_score": 80,
+        "position_open": false,
+        "reasons": [
+          "trend"
+        ],
+        "metrics": {
+          "close": 1.3683,
+          "bid": 1.3568,
+          "ask": 1.3683,
+          "spread_pct": 0.8405,
+          "ema9": 1.36235745,
+          "ema21": 1.35946868,
+          "ema50": 1.35804774,
+          "rsi14": 100.0,
+          "volume_ratio": 0.0,
+          "breakout_level": 1.3683
         }
       },
       {
         "pair": "XRPMYR",
-        "score": 10,
+        "score": 25,
         "minimum_buy_score": 80,
         "position_open": true,
         "reasons": [
+          "momentum",
           "spread sangat rendah"
         ],
         "metrics": {
-          "close": 4.1132,
-          "bid": 4.1123,
-          "ask": 4.1124,
+          "close": 4.1133,
+          "bid": 4.114,
+          "ask": 4.1141,
           "spread_pct": 0.0024,
-          "ema9": 4.11290014,
-          "ema21": 4.11389675,
-          "ema50": 4.1124889,
-          "rsi14": 38.57,
-          "volume_ratio": 0.01,
-          "breakout_level": 4.1162
+          "ema9": 4.11293527,
+          "ema21": 4.11365669,
+          "ema50": 4.11254941,
+          "rsi14": 43.13,
+          "volume_ratio": 0.056,
+          "breakout_level": 4.1158
         }
       },
       {
-        "pair": "ADAMYR",
+        "pair": "XLMMYR",
         "score": 10,
         "minimum_buy_score": 80,
         "position_open": false,
@@ -72,24 +94,22 @@
           "spread sangat rendah"
         ],
         "metrics": {
-          "close": 0.7347,
-          "bid": 0.7351,
-          "ask": 0.7352,
-          "spread_pct": 0.0136,
-          "ema9": 0.73502321,
-          "ema21": 0.73598065,
-          "ema50": 0.73710277,
-          "rsi14": 35.82,
+          "close": 0.6498,
+          "bid": 0.6497,
+          "ask": 0.6498,
+          "spread_pct": 0.0154,
+          "ema9": 0.64984323,
+          "ema21": 0.65023624,
+          "ema50": 0.65108691,
+          "rsi14": 100.0,
           "volume_ratio": 0.0,
-          "breakout_level": 0.7368
+          "breakout_level": 0.6498
         }
       }
     ],
-    "errors": {
-      "TRXMYR": "float division by zero"
-    }
+    "errors": {}
   },
-  "updated_at": "2026-08-15T10:51:23.330926+00:00",
+  "updated_at": "2026-08-15T11:40:47.061610+00:00",
   "pairs": [
     "XRPMYR",
     "ADAMYR",
@@ -116,14 +136,14 @@
   },
   "previous_scores": {
     "XRPMYR": 80,
-    "ADAMYR": 10,
-    "TRXMYR": 18,
-    "XLMMYR": 30
+    "ADAMYR": 30,
+    "TRXMYR": 30,
+    "XLMMYR": 10
   },
   "adaptive_buy_score": 80,
   "github_action": {
     "event": "schedule",
-    "run_number": "113",
+    "run_number": "114",
     "automatic": true
   }
 }
