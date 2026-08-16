@@ -11,104 +11,108 @@
   "win_rate_pct": 0.0,
   "last_action": "HOLD_POSITIONS",
   "last_scan": {
-    "time": "2026-08-16T06:00:06.176097+00:00",
+    "time": "2026-08-16T07:46:55.532600+00:00",
     "status": "MULTI_SCAN",
     "open_positions": 1,
     "max_open_positions": 3,
     "current_exposure_myr": 5.0,
     "max_total_exposure_myr": 15.0,
-    "best_pair": "ADAMYR",
-    "best_score": 30,
+    "best_pair": "XRPMYR",
+    "best_score": 50,
     "markets": [
       {
-        "pair": "ADAMYR",
-        "score": 30,
+        "pair": "XRPMYR",
+        "score": 50,
         "minimum_buy_score": 80,
-        "position_open": false,
+        "position_open": true,
         "reasons": [
+          "momentum",
           "RSI",
-          "spread sangat rendah"
+          "spread sangat rendah",
+          "breakout"
         ],
         "metrics": {
-          "close": 0.7265,
-          "bid": 0.7261,
-          "ask": 0.7262,
-          "spread_pct": 0.0138,
-          "ema9": 0.72618838,
-          "ema21": 0.72621032,
-          "ema50": 0.72759484,
-          "rsi14": 62.26,
-          "volume_ratio": 0.0,
-          "breakout_level": 0.7269
+          "close": 4.11,
+          "bid": 4.1101,
+          "ask": 4.1102,
+          "spread_pct": 0.0024,
+          "ema9": 4.10653843,
+          "ema21": 4.10710763,
+          "ema50": 4.10859564,
+          "rsi14": 57.42,
+          "volume_ratio": 0.999,
+          "breakout_level": 4.1076
         }
       },
       {
         "pair": "TRXMYR",
-        "score": 18,
+        "score": 30,
         "minimum_buy_score": 80,
         "position_open": false,
         "reasons": [
-          "trend awal"
+          "trend"
         ],
         "metrics": {
           "close": 1.3642,
           "bid": 1.3556,
-          "ask": 1.3637,
-          "spread_pct": 0.594,
-          "ema9": 1.36179502,
-          "ema21": 1.3595198,
-          "ema50": 1.3598363,
+          "ask": 1.3653,
+          "spread_pct": 0.7105,
+          "ema9": 1.36369564,
+          "ema21": 1.36179831,
+          "ema50": 1.36089242,
           "rsi14": 100.0,
           "volume_ratio": 0.0,
           "breakout_level": 1.3642
         }
       },
       {
-        "pair": "XRPMYR",
-        "score": 10,
-        "minimum_buy_score": 80,
-        "position_open": true,
-        "reasons": [
-          "spread sangat rendah"
-        ],
-        "metrics": {
-          "close": 4.1031,
-          "bid": 4.1033,
-          "ask": 4.1034,
-          "spread_pct": 0.0024,
-          "ema9": 4.10601601,
-          "ema21": 4.10806149,
-          "ema50": 4.10955475,
-          "rsi14": 41.47,
-          "volume_ratio": 0.014,
-          "breakout_level": 4.1131
-        }
-      },
-      {
         "pair": "XLMMYR",
-        "score": 5,
+        "score": 25,
         "minimum_buy_score": 80,
         "position_open": false,
         "reasons": [
+          "RSI",
           "spread rendah"
         ],
         "metrics": {
           "close": 0.6457,
           "bid": 0.6457,
-          "ask": 0.6462,
-          "spread_pct": 0.0774,
-          "ema9": 0.64563087,
-          "ema21": 0.64613273,
-          "ema50": 0.64749881,
-          "rsi14": 25.0,
+          "ask": 0.6464,
+          "spread_pct": 0.1083,
+          "ema9": 0.64587359,
+          "ema21": 0.64608114,
+          "ema50": 0.64714397,
+          "rsi14": 62.96,
           "volume_ratio": 0.0,
-          "breakout_level": 0.6457
+          "breakout_level": 0.6467
+        }
+      },
+      {
+        "pair": "ADAMYR",
+        "score": 18,
+        "minimum_buy_score": 80,
+        "position_open": false,
+        "reasons": [
+          "RSI pulih",
+          "spread sangat rendah"
+        ],
+        "metrics": {
+          "close": 0.7261,
+          "bid": 0.7264,
+          "ask": 0.7265,
+          "spread_pct": 0.0138,
+          "ema9": 0.72613951,
+          "ema21": 0.72617714,
+          "ema50": 0.72723922,
+          "rsi14": 48.65,
+          "volume_ratio": 0.0,
+          "breakout_level": 0.7269
         }
       }
     ],
     "errors": {}
   },
-  "updated_at": "2026-08-16T06:00:06.176123+00:00",
+  "updated_at": "2026-08-16T07:46:55.532627+00:00",
   "pairs": [
     "XRPMYR",
     "ADAMYR",
@@ -137,14 +141,14 @@
   },
   "previous_scores": {
     "XRPMYR": 88,
-    "ADAMYR": 30,
-    "TRXMYR": 18,
-    "XLMMYR": 5
+    "ADAMYR": 18,
+    "TRXMYR": 30,
+    "XLMMYR": 25
   },
   "adaptive_buy_score": 80,
   "github_action": {
     "event": "schedule",
-    "run_number": "131",
+    "run_number": "132",
     "automatic": true
   }
 }
