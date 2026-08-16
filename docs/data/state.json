@@ -11,103 +11,84 @@
   "win_rate_pct": 0.0,
   "last_action": "HOLD_POSITIONS",
   "last_scan": {
-    "time": "2026-08-15T23:42:16.717205+00:00",
+    "time": "2026-08-16T03:14:49.055465+00:00",
     "status": "MULTI_SCAN",
     "open_positions": 1,
     "max_open_positions": 3,
     "current_exposure_myr": 5.0,
     "max_total_exposure_myr": 15.0,
     "best_pair": "XRPMYR",
-    "best_score": 60,
+    "best_score": 50,
     "markets": [
       {
         "pair": "XRPMYR",
-        "score": 60,
+        "score": 50,
         "minimum_buy_score": 80,
         "position_open": true,
         "reasons": [
-          "trend",
+          "RSI",
           "volume kuat",
           "spread sangat rendah"
         ],
         "metrics": {
-          "close": 4.1094,
-          "bid": 4.1099,
-          "ask": 4.11,
+          "close": 4.1114,
+          "bid": 4.1113,
+          "ask": 4.1114,
           "spread_pct": 0.0024,
-          "ema9": 4.11351677,
-          "ema21": 4.11239316,
-          "ema50": 4.11137028,
-          "rsi14": 45.38,
-          "volume_ratio": 3.541,
-          "breakout_level": 4.1158
-        }
-      },
-      {
-        "pair": "XLMMYR",
-        "score": 18,
-        "minimum_buy_score": 80,
-        "position_open": false,
-        "reasons": [
-          "trend awal"
-        ],
-        "metrics": {
-          "close": 0.6506,
-          "bid": 0.6489,
-          "ask": 0.6505,
-          "spread_pct": 0.246,
-          "ema9": 0.64988313,
-          "ema21": 0.64980177,
-          "ema50": 0.64998293,
-          "rsi14": 72.0,
-          "volume_ratio": 0.0,
-          "breakout_level": 0.6506
+          "ema9": 4.11042948,
+          "ema21": 4.11086223,
+          "ema50": 4.11098953,
+          "rsi14": 55.88,
+          "volume_ratio": 5.119,
+          "breakout_level": 4.1129
         }
       },
       {
         "pair": "ADAMYR",
-        "score": 10,
+        "score": 5,
         "minimum_buy_score": 80,
         "position_open": false,
         "reasons": [
-          "spread sangat rendah"
+          "spread rendah"
         ],
         "metrics": {
-          "close": 0.7257,
-          "bid": 0.7224,
-          "ask": 0.7225,
-          "spread_pct": 0.0138,
-          "ema9": 0.72823424,
-          "ema21": 0.72928759,
-          "ema50": 0.73105384,
-          "rsi14": 22.54,
-          "volume_ratio": 0.0,
-          "breakout_level": 0.7312
+          "close": 0.7251,
+          "bid": 0.7258,
+          "ask": 0.7262,
+          "spread_pct": 0.0551,
+          "ema9": 0.72537502,
+          "ema21": 0.72629058,
+          "ema50": 0.72850829,
+          "rsi14": 47.17,
+          "volume_ratio": 0.013,
+          "breakout_level": 0.7262
         }
       },
       {
-        "pair": "TRXMYR",
+        "pair": "XLMMYR",
         "score": 0,
         "minimum_buy_score": 80,
         "position_open": false,
         "reasons": [],
         "metrics": {
-          "close": 1.355,
-          "bid": 1.355,
-          "ask": 1.367,
-          "spread_pct": 0.8778,
-          "ema9": 1.35723124,
-          "ema21": 1.36111352,
-          "ema50": 1.36315697,
-          "rsi14": 0.0,
+          "close": 0.645,
+          "bid": 0.645,
+          "ask": 0.6501,
+          "spread_pct": 0.7845,
+          "ema9": 0.64613021,
+          "ema21": 0.64748543,
+          "ema50": 0.64874721,
+          "rsi14": 22.0,
           "volume_ratio": 0.0,
-          "breakout_level": 1.3683
+          "breakout_level": 0.6508
         }
       }
     ],
-    "errors": {}
+    "errors": {
+      "TRXMYR": "float division by zero"
+    }
   },
-  "updated_at": "2026-08-15T23:42:16.717234+00:00",
+  "updated_at": "2026-08-16T03:14:49.055489+00:00",
   "pairs": [
     "XRPMYR",
     "ADAMYR",
@@ -136,14 +117,14 @@
   },
   "previous_scores": {
     "XRPMYR": 88,
-    "ADAMYR": 10,
+    "ADAMYR": 5,
     "TRXMYR": 0,
-    "XLMMYR": 18
+    "XLMMYR": 0
   },
   "adaptive_buy_score": 80,
   "github_action": {
     "event": "schedule",
-    "run_number": "128",
+    "run_number": "129",
     "automatic": true
   }
 }
