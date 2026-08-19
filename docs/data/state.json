@@ -11,7 +11,7 @@
   "win_rate_pct": 8.33,
   "last_action": "HOLD",
   "last_scan": {
-    "time": "2026-08-19T22:57:17.453817+00:00",
+    "time": "2026-08-19T23:53:33.246897+00:00",
     "status": "MULTI_SCAN",
     "open_positions": 0,
     "max_open_positions": 3,
@@ -27,42 +27,66 @@
         "position_open": false,
         "reasons": [
           "trend",
-          "volume kuat",
+          "RSI",
           "spread sangat rendah"
         ],
         "metrics": {
-          "close": 4.492,
-          "bid": 4.456,
-          "ask": 4.4561,
+          "close": 4.4561,
+          "bid": 4.4501,
+          "ask": 4.4502,
           "spread_pct": 0.0022,
-          "ema9": 4.48826358,
-          "ema21": 4.41629761,
-          "ema50": 4.30848232,
-          "rsi14": 76.97,
-          "volume_ratio": 1.483,
+          "ema9": 4.46654204,
+          "ema21": 4.42736802,
+          "ema50": 4.32957576,
+          "rsi14": 67.44,
+          "volume_ratio": 0.743,
           "breakout_level": 4.5519
         }
       },
       {
         "pair": "ADAMYR",
-        "score": 50,
+        "score": 60,
         "minimum_buy_score": 90,
         "position_open": false,
         "reasons": [
           "trend",
-          "volume kuat"
+          "RSI",
+          "spread sangat rendah"
         ],
         "metrics": {
-          "close": 0.7661,
-          "bid": 0.7621,
-          "ask": 0.7648,
-          "spread_pct": 0.353,
-          "ema9": 0.76079587,
-          "ema21": 0.74886185,
-          "ema50": 0.73447519,
-          "rsi14": 83.55,
-          "volume_ratio": 2.654,
+          "close": 0.754,
+          "bid": 0.7542,
+          "ask": 0.7543,
+          "spread_pct": 0.0133,
+          "ema9": 0.75756247,
+          "ema21": 0.75102284,
+          "ema50": 0.73764042,
+          "rsi14": 64.61,
+          "volume_ratio": 0.279,
           "breakout_level": 0.7735
+        }
+      },
+      {
+        "pair": "XLMMYR",
+        "score": 60,
+        "minimum_buy_score": 90,
+        "position_open": false,
+        "reasons": [
+          "trend",
+          "RSI",
+          "spread sangat rendah"
+        ],
+        "metrics": {
+          "close": 0.6848,
+          "bid": 0.6849,
+          "ask": 0.685,
+          "spread_pct": 0.0146,
+          "ema9": 0.68638253,
+          "ema21": 0.68201472,
+          "ema50": 0.67042863,
+          "rsi14": 67.87,
+          "volume_ratio": 0.203,
+          "breakout_level": 0.698
         }
       },
       {
@@ -76,43 +100,21 @@
         ],
         "metrics": {
           "close": 1.3546,
-          "bid": 1.3469,
-          "ask": 1.3551,
-          "spread_pct": 0.6051,
-          "ema9": 1.3556814,
-          "ema21": 1.35456284,
-          "ema50": 1.35392191,
-          "rsi14": 53.52,
+          "bid": 1.3478,
+          "ask": 1.3564,
+          "spread_pct": 0.634,
+          "ema9": 1.35504294,
+          "ema21": 1.35457462,
+          "ema50": 1.35401619,
+          "rsi14": 52.2,
           "volume_ratio": 0.0,
           "breakout_level": 1.3745
-        }
-      },
-      {
-        "pair": "XLMMYR",
-        "score": 40,
-        "minimum_buy_score": 90,
-        "position_open": false,
-        "reasons": [
-          "trend",
-          "spread sangat rendah"
-        ],
-        "metrics": {
-          "close": 0.6884,
-          "bid": 0.6865,
-          "ask": 0.6866,
-          "spread_pct": 0.0146,
-          "ema9": 0.68837298,
-          "ema21": 0.68061588,
-          "ema50": 0.66789885,
-          "rsi14": 73.71,
-          "volume_ratio": 0.078,
-          "breakout_level": 0.698
         }
       }
     ],
     "errors": {}
   },
-  "updated_at": "2026-08-19T22:57:17.453846+00:00",
+  "updated_at": "2026-08-19T23:53:33.246928+00:00",
   "pairs": [
     "XRPMYR",
     "ADAMYR",
@@ -122,14 +124,14 @@
   "positions": {},
   "previous_scores": {
     "XRPMYR": 60,
-    "ADAMYR": 50,
+    "ADAMYR": 60,
     "TRXMYR": 50,
-    "XLMMYR": 40
+    "XLMMYR": 60
   },
   "adaptive_buy_score": 90,
   "github_action": {
     "event": "schedule",
-    "run_number": "199",
+    "run_number": "200",
     "automatic": true
   }
 }
