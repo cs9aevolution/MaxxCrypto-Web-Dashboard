@@ -19,14 +19,18 @@ function render(state,trades){
    const cost=Number(p.principal_myr)+Number(p.entry_fee_myr||0);
    floating+=net-cost; openValue+=net;
  }
- const cash=Number(state.paper_myr||0),equity=cash+openValue;
+ const cash=Number(state.live_myr_available ?? state.live_myr_balance ?? 0);
+  const equity=cash+openValue;
  $("totalEquity").textContent=money(equity,4);$("cashBalance").textContent=money(cash,2);
- $("openExposure").textContent=money(state.last_scan?.current_exposure_myr||0,2);
- $("positionCount").textContent=`${Object.keys(positions).length} / ${state.last_scan?.max_open_positions||0}`;
+ $("openExposure").textContent=money(openValue,2);
+ $("positionCount").textContent=`${Object.keys(positions).length} / ${state.last_scan?.max_open_positions||3}`;
  $("floatingPnl").textContent=money(floating,4);$("floatingPnl").className=`value ${floating>0?"good-text":floating<0?"bad-text":""}`;
- $("realizedPnl").textContent=money(state.realized_profit_myr||0,4);
+ $("realizedPnl").textContent=money(state.live_realized_profit_myr||0,4);
  $("lastAction").textContent=String(state.last_action||"—").replaceAll("_"," ");
- $("winRate").textContent=`${Number(state.win_rate_pct||0).toFixed(1)}%`;
+ const liveTradesForRate=(window.__maxxLiveTrades||[]);
+  const liveWins=liveTradesForRate.filter(t=>Number(t.profit_myr||0)>0).length;
+  const liveWinRate=liveTradesForRate.length ? liveWins/liveTradesForRate.length*100 : 0;
+  $("winRate").textContent=`${liveWinRate.toFixed(1)}%`;
 
  const age=(Date.now()-new Date(state.updated_at).getTime())/60000;
  $("botBadge").className=`badge ${age<90?"good":"bad"}`;
@@ -230,7 +234,9 @@ function drawEquityCurve(points, startingBalance) {
 }
 
 function renderPerformance(state, trades) {
-  const start = Number(state.paper_start_myr || 100);
+  const liveBalance = Number(state.live_myr_balance ?? state.live_myr_available ?? 0);
+  const liveRealized = Number(state.live_realized_profit_myr || 0);
+  const start = liveBalance - liveRealized;
   const stats = calculatePerformance(trades, start);
 
   $("profitFactor").textContent =
@@ -345,7 +351,22 @@ async function load() {
     }
 
     const state = await stateResponse.json();
-    const trades = await tradesResponse.json();
+    const allTrades = await tradesResponse.json();
+
+    const liveVersion =
+      state?.epoch?.version ||
+      state?.engine_learning_version ||
+      "V18_3_LIVE_2026_08_22";
+
+    const trades = (Array.isArray(allTrades) ? allTrades : []).filter(t =>
+      String(t.engine_version || "") === String(liveVersion) ||
+      (
+        String(t.execution_mode || "").toUpperCase() === "LIVE" &&
+        String(t.engine_version || "").startsWith("V18_3_LIVE")
+      )
+    );
+
+    window.__maxxLiveTrades = trades;
 
     render(state, trades);
     renderPerformance(state, trades);
