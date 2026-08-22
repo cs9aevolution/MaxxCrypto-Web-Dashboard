@@ -333,11 +333,14 @@ async function load() {
   $("errorBox").classList.add("hidden");
 
   try {
-    const [stateResponse, tradesResponse] = await Promise.all([
+    const [stateResponse, tradesResponse, liveResponse] = await Promise.all([
       fetch(`${WORKER_API_URL}/api/state?t=${Date.now()}`, {
         cache: "no-store",
       }),
       fetch(`${WORKER_API_URL}/api/trades?limit=500&t=${Date.now()}`, {
+        cache: "no-store",
+      }),
+      fetch(`${WORKER_API_URL}/api/live-execution?t=${Date.now()}`, {
         cache: "no-store",
       }),
     ]);
@@ -350,8 +353,19 @@ async function load() {
       throw new Error(`trades API HTTP ${tradesResponse.status}`);
     }
 
+    if (!liveResponse.ok) {
+      throw new Error(`live-execution API HTTP ${liveResponse.status}`);
+    }
+
     const state = await stateResponse.json();
     const allTrades = await tradesResponse.json();
+    const liveExecution = await liveResponse.json();
+
+    // /api/live-execution is the authoritative source for real Luno MYR cash.
+    state.live_myr_balance = Number(liveExecution?.balance?.balance ?? 0);
+    state.live_myr_reserved = Number(liveExecution?.balance?.reserved ?? 0);
+    state.live_myr_available = Number(liveExecution?.balance?.available ?? 0);
+    state.live_balance_error = liveExecution?.balance_error ?? null;
 
     const liveVersion =
       state?.epoch?.version ||
