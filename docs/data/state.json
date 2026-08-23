@@ -11,106 +11,23 @@
   "win_rate_pct": 31.25,
   "last_action": "HOLD",
   "last_scan": {
-    "time": "2026-08-23T10:55:43.454749+00:00",
+    "time": "2026-08-23T11:49:01.604881+00:00",
     "status": "MULTI_SCAN",
     "open_positions": 0,
     "max_open_positions": 3,
     "current_exposure_myr": 0,
     "max_total_exposure_myr": 15.0,
-    "best_pair": "XRPMYR",
-    "best_score": 50,
-    "markets": [
-      {
-        "pair": "XRPMYR",
-        "score": 50,
-        "minimum_buy_score": 90,
-        "position_open": false,
-        "reasons": [
-          "trend",
-          "volume cukup",
-          "spread sangat rendah"
-        ],
-        "metrics": {
-          "close": 5.9384,
-          "bid": 5.9188,
-          "ask": 5.9189,
-          "spread_pct": 0.0017,
-          "ema9": 5.91414652,
-          "ema21": 5.88329781,
-          "ema50": 5.87517659,
-          "rsi14": 77.31,
-          "volume_ratio": 1.366,
-          "breakout_level": 5.965
-        }
-      },
-      {
-        "pair": "XLMMYR",
-        "score": 38,
-        "minimum_buy_score": 90,
-        "position_open": false,
-        "reasons": [
-          "trend awal",
-          "volume kuat"
-        ],
-        "metrics": {
-          "close": 0.7701,
-          "bid": 0.7701,
-          "ask": 0.7749,
-          "spread_pct": 0.6194,
-          "ema9": 0.7691407,
-          "ema21": 0.76495152,
-          "ema50": 0.76704764,
-          "rsi14": 81.49,
-          "volume_ratio": 1.609,
-          "breakout_level": 0.7748
-        }
-      },
-      {
-        "pair": "TRXMYR",
-        "score": 30,
-        "minimum_buy_score": 90,
-        "position_open": false,
-        "reasons": [
-          "trend"
-        ],
-        "metrics": {
-          "close": 1.3753,
-          "bid": 1.3619,
-          "ask": 1.3754,
-          "spread_pct": 0.9815,
-          "ema9": 1.37310902,
-          "ema21": 1.36842858,
-          "ema50": 1.36527102,
-          "rsi14": 100.0,
-          "volume_ratio": 0.0,
-          "breakout_level": 1.3753
-        }
-      },
-      {
-        "pair": "ADAMYR",
-        "score": 18,
-        "minimum_buy_score": 90,
-        "position_open": false,
-        "reasons": [
-          "trend awal"
-        ],
-        "metrics": {
-          "close": 0.889,
-          "bid": 0.8835,
-          "ask": 0.887,
-          "spread_pct": 0.3946,
-          "ema9": 0.88237781,
-          "ema21": 0.87805857,
-          "ema50": 0.88221497,
-          "rsi14": 81.71,
-          "volume_ratio": 0.06,
-          "breakout_level": 0.889
-        }
-      }
-    ],
-    "errors": {}
+    "best_pair": null,
+    "best_score": 0,
+    "markets": [],
+    "errors": {
+      "XRPMYR": "Luno HTTP 401: {\"error\":\"Your API key has been revoked.\",\"error_code\":\"ErrApiKeyRevoked\"}\n",
+      "ADAMYR": "Luno HTTP 401: {\"error\":\"Your API key has been revoked.\",\"error_code\":\"ErrApiKeyRevoked\"}\n",
+      "TRXMYR": "Luno HTTP 401: {\"error\":\"Your API key has been revoked.\",\"error_code\":\"ErrApiKeyRevoked\"}\n",
+      "XLMMYR": "Luno HTTP 401: {\"error\":\"Your API key has been revoked.\",\"error_code\":\"ErrApiKeyRevoked\"}\n"
+    }
   },
-  "updated_at": "2026-08-23T10:55:43.454782+00:00",
+  "updated_at": "2026-08-23T11:49:01.604922+00:00",
   "pairs": [
     "XRPMYR",
     "ADAMYR",
@@ -127,7 +44,7 @@
   "adaptive_buy_score": 90,
   "github_action": {
     "event": "schedule",
-    "run_number": "256",
+    "run_number": "257",
     "automatic": true
   }
 }
