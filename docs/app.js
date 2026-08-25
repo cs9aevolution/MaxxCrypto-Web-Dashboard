@@ -68,6 +68,49 @@ function render(state,trades){
 const WORKER_API_URL = "https://maxxcrypto-luno.cs9aevolution.workers.dev";
 
 
+function renderLiveAudit(state, trades) {
+  const summary = state.live_accounting_summary || state.last_scan?.live_accounting_summary || {};
+  const transactions = state.live_transaction_audit || state.last_scan?.live_transaction_audit || state.recent_live_trade_audit || [];
+  const dustAudit = state.live_dust_audit || state.last_scan?.live_dust_audit || [];
+  const partialEvents = transactions.filter(e => String(e.event_type || "").toUpperCase() === "PARTIAL_EXIT");
+
+  const closedCount = Number(summary.closed_trades_current_epoch ?? trades.length);
+  const partialCount = Number(summary.partial_exit_events_current_epoch ?? partialEvents.length);
+  const dustCount = Number(summary.dust_positions ?? dustAudit.length);
+  $("auditClosedTrades").textContent = String(closedCount);
+  $("auditPartialExits").textContent = String(partialCount);
+  $("auditDustCount").textContent = String(dustCount);
+
+  const livePnl = Number(summary.total_live_accounting_pnl_myr ?? state.live_realized_profit_myr ?? 0);
+  const dustPartialPnl = Number(summary.dust_partial_realized_profit_myr ?? 0);
+  const dustCost = Number(summary.dust_cost_basis_myr ?? state.last_scan?.dust_cost_basis_myr ?? 0);
+
+  $("auditLivePnl").textContent = money(livePnl,4);
+  $("auditLivePnl").className = livePnl>0?"good-text":livePnl<0?"bad-text":"";
+  $("auditDustPartialPnl").textContent = money(dustPartialPnl,4);
+  $("auditDustPartialPnl").className = dustPartialPnl>0?"good-text":dustPartialPnl<0?"bad-text":"";
+  $("auditDustCost").textContent = money(dustCost,4);
+
+  badge($("auditBadge"),`${transactions.length} EVENTS`,transactions.length?"good":"neutral");
+  badge($("dustAuditBadge"),`${dustCount} DUST`,dustCount?"bad":"neutral");
+
+  const ordered = transactions.slice().sort((x,y)=>new Date(y.time||y.closed_at||0)-new Date(x.time||x.closed_at||0)).slice(0,50);
+  $("liveAuditBody").innerHTML = ordered.length ? ordered.map(event=>{
+    const type=String(event.event_type||"CLOSED_TRADE").toUpperCase();
+    const pnl=Number(event.realized_profit_myr??event.profit_myr??0);
+    const proceeds=event.net_proceeds_myr??event.gross_counter_fill_myr??null;
+    const remaining=event.remaining_tracked_volume??event.remaining_volume??null;
+    const status=event.transaction_status||event.lifecycle_status_after_exit||(type==="CLOSED_TRADE"?"CLOSED":"PARTIAL_EXIT");
+    return `<tr><td>${dateMY(event.time||event.closed_at)}</td><td><b>${event.pair||"—"}</b></td><td><span class="event-pill ${type==="PARTIAL_EXIT"?"partial":"closed"}">${type.replaceAll("_"," ")}</span></td><td>${String(event.exit_reason||event.reason||"—").replaceAll("_"," ")}</td><td>${proceeds==null?"—":money(proceeds,4)}</td><td class="${pnl>=0?"good-text":"bad-text"}">${money(pnl,4)}</td><td>${remaining==null?"—":num(remaining,8)}</td><td>${String(status).replaceAll("_"," ")}</td></tr>`;
+  }).join("") : '<tr><td colspan="8" class="empty-row">Belum ada audit event daripada Worker V18.3.24.</td></tr>';
+
+  $("dustAuditBody").innerHTML = dustAudit.length ? dustAudit.slice().reverse().map(dust=>{
+    const pnl=Number(dust.partial_realized_profit_myr||0);
+    return `<tr><td><b>${dust.pair||"—"}</b></td><td>${num(dust.tracked_dust_volume,8)}</td><td>${num(dust.current_min_volume,8)}</td><td>${money(dust.original_principal_myr,4)}</td><td class="${pnl>=0?"good-text":"bad-text"}">${money(pnl,4)}</td><td>${money(dust.remaining_cost_basis_myr,4)}</td><td>${String(dust.dust_reconciliation_status||dust.dust_status||"DUST").replaceAll("_"," ")}</td><td>${dateMY(dust.last_dust_check_at||dust.dust_classified_at)}</td></tr>`;
+  }).join("") : '<tr><td colspan="8" class="empty-row">Tiada dust position.</td></tr>';
+}
+
+
 function calculatePerformance(trades, startingBalance = 100) {
   const ordered = trades
     .slice()
@@ -384,6 +427,7 @@ async function load() {
 
     render(state, trades);
     renderPerformance(state, trades);
+    renderLiveAudit(state, trades);
   } catch (error) {
     $("errorBox").textContent =
       `Dashboard gagal membaca Cloudflare Worker: ${error.message}`;
