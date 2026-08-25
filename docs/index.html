@@ -12,7 +12,7 @@
     <header class="top">
       <div>
         <p class="eyebrow">MAXXCRYPTO AI</p>
-        <h1>Control Center V3</h1>
+        <h1>Control Center V3.1</h1>
         <p class="sub">Multi-position Luno trading monitor</p>
       </div>
       <div class="top-actions">
@@ -194,7 +194,33 @@
       <div id="setupPerformanceList" class="setup-list"></div>
     </section>
 
-<section class="card panel">
+
+    <section class="card panel audit-panel">
+      <div class="section-head">
+        <div><span class="label">LIVE ACCOUNTING AUDIT</span><h2>Apa yang berlaku pada duit & posisi</h2></div>
+        <div id="auditBadge" class="badge neutral">0 EVENTS</div>
+      </div>
+      <div class="audit-summary-grid">
+        <div class="metric-card"><span>Closed trades</span><strong id="auditClosedTrades">0</strong></div>
+        <div class="metric-card"><span>Partial exits</span><strong id="auditPartialExits">0</strong></div>
+        <div class="metric-card"><span>Dust holdings</span><strong id="auditDustCount">0</strong></div>
+        <div class="metric-card"><span>Total LIVE realized P/L</span><strong id="auditLivePnl">RM0.00</strong></div>
+        <div class="metric-card"><span>Dust partial realized P/L</span><strong id="auditDustPartialPnl">RM0.00</strong></div>
+        <div class="metric-card"><span>Dust remaining cost basis</span><strong id="auditDustCost">RM0.00</strong></div>
+      </div>
+      <div class="audit-note">Closed Trades kekal sebagai sample strategi. Partial SELL dan baki dust dipaparkan berasingan supaya transaksi LIVE tidak nampak seperti hilang.</div>
+      <div class="section-head audit-subhead"><div><span class="label">TRANSACTION LIFECYCLE</span><h3>Closed trade + partial exit</h3></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Masa</th><th>Pair</th><th>Event</th><th>Reason</th><th>Proceeds</th><th>Realized P/L</th><th>Baki tracked</th><th>Status</th></tr></thead>
+      <tbody id="liveAuditBody"><tr><td colspan="8" class="empty-row">Belum ada audit event.</td></tr></tbody></table></div>
+    </section>
+
+    <section class="card panel audit-panel">
+      <div class="section-head"><div><span class="label">DUST AUDIT</span><h2>Baki crypto yang belum boleh ditutup</h2></div><div id="dustAuditBadge" class="badge neutral">0 DUST</div></div>
+      <div class="table-wrap"><table><thead><tr><th>Pair</th><th>Dust volume</th><th>Min volume</th><th>Modal asal</th><th>Partial P/L</th><th>Remaining cost</th><th>Status</th><th>Last check</th></tr></thead>
+      <tbody id="dustAuditBody"><tr><td colspan="8" class="empty-row">Tiada dust position.</td></tr></tbody></table></div>
+    </section>
+
+    <section class="card panel">
       <div class="section-head">
         <div>
           <span class="label">TRADE HISTORY</span>
