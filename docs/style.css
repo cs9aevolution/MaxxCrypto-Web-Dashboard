@@ -65,3 +65,13 @@ footer{display:flex;justify-content:space-between;color:var(--muted);font-size:1
   .setup-list{grid-template-columns:1fr}
   #equityCanvas{height:220px}
 }
+
+.audit-panel{margin-bottom:12px}
+.audit-summary-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-bottom:12px}
+.audit-note{padding:11px 13px;border:1px solid rgba(102,226,255,.13);background:rgba(102,226,255,.045);border-radius:12px;color:var(--muted);font-size:11px;line-height:1.55}
+.audit-subhead{margin-top:20px;margin-bottom:10px}.audit-subhead h3{margin:6px 0 0;font-size:16px}
+.event-pill{display:inline-flex;padding:5px 8px;border-radius:999px;font-size:9px;font-weight:900;letter-spacing:.04em;white-space:nowrap}
+.event-pill.partial{color:var(--yellow);background:rgba(246,200,107,.09);border:1px solid rgba(246,200,107,.16)}
+.event-pill.closed{color:var(--green);background:rgba(64,223,154,.09);border:1px solid rgba(64,223,154,.16)}
+@media(max-width:1000px){.audit-summary-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.audit-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
