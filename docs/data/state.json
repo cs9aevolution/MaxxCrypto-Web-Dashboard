@@ -11,7 +11,7 @@
   "win_rate_pct": 31.25,
   "last_action": "HOLD",
   "last_scan": {
-    "time": "2026-08-26T03:36:56.701610+00:00",
+    "time": "2026-08-26T05:18:30.222299+00:00",
     "status": "MULTI_SCAN",
     "open_positions": 0,
     "max_open_positions": 3,
@@ -27,7 +27,7 @@
       "XLMMYR": "Luno HTTP 401: {\"error\":\"Your API key has been revoked.\",\"error_code\":\"ErrApiKeyRevoked\"}\n"
     }
   },
-  "updated_at": "2026-08-26T03:36:56.701654+00:00",
+  "updated_at": "2026-08-26T05:18:30.222365+00:00",
   "pairs": [
     "XRPMYR",
     "ADAMYR",
@@ -44,7 +44,7 @@
   "adaptive_buy_score": 90,
   "github_action": {
     "event": "schedule",
-    "run_number": "296",
+    "run_number": "297",
     "automatic": true
   }
 }
