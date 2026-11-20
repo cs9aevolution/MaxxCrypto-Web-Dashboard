@@ -11,7 +11,7 @@
   "win_rate_pct": 31.25,
   "last_action": "HOLD",
   "last_scan": {
-    "time": "2026-11-20T06:34:33.866594+00:00",
+    "time": "2026-11-20T15:44:53.186320+00:00",
     "status": "MULTI_SCAN",
     "open_positions": 0,
     "max_open_positions": 3,
@@ -21,13 +21,13 @@
     "best_score": 0,
     "markets": [],
     "errors": {
-      "XRPMYR": "Luno HTTP 401: {\"error\":\"Your API key has been revoked.\",\"error_code\":\"ErrApiKeyRevoked\"}\n",
-      "ADAMYR": "Luno HTTP 401: {\"error\":\"Your API key has been revoked.\",\"error_code\":\"ErrApiKeyRevoked\"}\n",
-      "TRXMYR": "Luno HTTP 401: {\"error\":\"Your API key has been revoked.\",\"error_code\":\"ErrApiKeyRevoked\"}\n",
-      "XLMMYR": "Luno HTTP 401: {\"error\":\"Your API key has been revoked.\",\"error_code\":\"ErrApiKeyRevoked\"}\n"
+      "XRPMYR": "Luno HTTP 401: {\"error\":\"Authentication failed\",\"error_code\":\"ErrUnauthorized\"}\n",
+      "ADAMYR": "Luno HTTP 401: {\"error\":\"Authentication failed\",\"error_code\":\"ErrUnauthorized\"}\n",
+      "TRXMYR": "Luno HTTP 401: {\"error\":\"Authentication failed\",\"error_code\":\"ErrUnauthorized\"}\n",
+      "XLMMYR": "Luno HTTP 401: {\"error\":\"Authentication failed\",\"error_code\":\"ErrUnauthorized\"}\n"
     }
   },
-  "updated_at": "2026-11-20T06:34:33.866634+00:00",
+  "updated_at": "2026-11-20T15:44:53.186354+00:00",
   "pairs": [
     "XRPMYR",
     "ADAMYR",
@@ -44,7 +44,7 @@
   "adaptive_buy_score": 90,
   "github_action": {
     "event": "schedule",
-    "run_number": "756",
+    "run_number": "757",
     "automatic": true
   }
 }
